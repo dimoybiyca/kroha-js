@@ -1,3 +1,6 @@
+@import "./variables.scss";
+@import "./general.scss";
+
 .instruction {
   &__title {
     text-align: center;
@@ -15,7 +18,7 @@
   &__btn {
     font-family: "Press Start 2P", monospace;
     background-color: #82828216;
-    color: #ee9b00;
+    color: $code;
     cursor: pointer;
     width: 100%;
     text-align: left;
@@ -45,7 +48,7 @@
 .accordion__btn:after {
   content: "+"; /* Unicode character for "plus" sign (+) */
   font-size: 28px;
-  color: #ee9b00;
+  color: $code;
   float: right;
   margin-left: 5px;
   transition: all 0.3s;

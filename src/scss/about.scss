@@ -1,10 +1,13 @@
+@import "./variables.scss";
+@import "./general.scss";
+
 .about {
   &__title {
     text-align: center;
   }
   &__article {
     font-family: sans-serif;
-    color: #94d2bd;
+    color: $text;
     font-size: 28px;
   }
 }

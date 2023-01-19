@@ -1,5 +1,5 @@
 {
-  "name": "kroha",
+  "name": "kroha-js",
   "version": "1.0.0",
   "description": "First generation computer simulator",
   "main": "index.js",
