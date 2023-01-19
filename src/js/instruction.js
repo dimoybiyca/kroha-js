@@ -1,4 +1,4 @@
-import "../scss/style.scss";
+import "../scss/instruction.scss";
 const acc = document.querySelectorAll(".accordion__btn");
 
 for (let i = 0; i < acc.length; i++) {

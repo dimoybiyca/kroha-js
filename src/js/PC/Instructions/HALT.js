@@ -1,7 +1,7 @@
-import Info from "../../Info";
-import ALU from "../ALU";
-import RAM from "../RAM";
-import Screen from "../Screen";
+import Info from "../Parts/Info";
+import ALU from "../Parts/ALU";
+import RAM from "../Parts/RAM";
+import Screen from "../Parts/Screen";
 
 export default class HALT {
   constructor() {

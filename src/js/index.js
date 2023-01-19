@@ -1,4 +1,3 @@
-"use strict";
 import "../scss/style.scss";
 import Computer from "./PC/Computer";
 import PageBuilder from "./PC/pageBuilder";
