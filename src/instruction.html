@@ -10,7 +10,15 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <div class="logo"><span class="logo-higl">KROHA</span>JS</div>
+          <div class="logo">
+            <a class="logo__link" href="./index.html">
+              <span class="logo-higl">KROHA</span>JS
+            </a>
+          </div>
+
+          <div class="header__burger" id="burger-menu">
+            <span></span>
+          </div>
           <div class="header__nav">
             <ul class="header__nav-list">
               <li class="header__nav-elem">
@@ -35,7 +43,9 @@
         <h2 class="instruction__title">Instruction</h2>
 
         <div class="accordion">
-          <button class="accordion__btn">Short information</button>
+          <button class="accordion__btn">
+            <p class="accordion__title">Short information</p>
+          </button>
           <div class="accordion__panel">
             <p class="accordion__article">
               KROHA.JS is an emulator of the Neumann machine (computer) of the
@@ -51,13 +61,6 @@
               is entered.
             </p>
 
-            <p class="accordion__article-sub">
-              mode (), cell (shows the memory cell in which the cursor is
-              currently located), decimal (shows the decimal value of the memory
-              cell in which the cursor is located), instruction () and the
-              values of the address fields of cells A1, A2, A3 (Operand) and
-              decimal values located at these addresses (Value)
-            </p>
             <p class="accordion__article-sub no-margin">
               Information window that shows information about the current memory
               cell and the state of the computer. In particular, such fields as
@@ -111,7 +114,9 @@
         </div>
 
         <div class="accordion">
-          <button class="accordion__btn">Navigation</button>
+          <button class="accordion__btn">
+            <p class="accordion__title">Navigation</p>
+          </button>
           <div class="accordion__panel">
             <p class="accordion__article">
               You can use the arrow keys on the keyboard to move the cursor
@@ -127,7 +132,9 @@
         </div>
 
         <div class="accordion">
-          <button class="accordion__btn">Modes</button>
+          <button class="accordion__btn">
+            <p class="accordion__title">Modes</p>
+          </button>
           <div class="accordion__panel">
             <p class="accordion__article">
               The computer can work in 3 modes - automatic(auto),
@@ -171,7 +178,9 @@
         </div>
 
         <div class="accordion">
-          <button class="accordion__btn">Instructions (Commands)</button>
+          <button class="accordion__btn">
+            <p class="accordion__title">Instructions (Commands)</p>
+          </button>
           <div class="accordion__panel">
             <p class="accordion__article no-margin">
               KROHA.JS support 8 instructions:
@@ -492,7 +501,9 @@
         </div>
 
         <div class="accordion">
-          <button class="accordion__btn">Program Example</button>
+          <button class="accordion__btn">
+            <p class="accordion__title">Program Example</p>
+          </button>
           <div class="accordion__panel">
             <p class="accordion__article">Soon...</p>
           </div>

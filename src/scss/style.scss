@@ -218,12 +218,6 @@
 }
 
 @media (max-width: 810px) {
-  .header__inner {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-  }
   .container {
     max-width: 480px;
   }
@@ -281,19 +275,6 @@
   }
   .alu__tag + .alu__tag {
     margin-left: 0;
-  }
-}
-
-@media (max-width: 410px) {
-  .header__inner {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .header__nav {
-    display: none;
-  }
-  .header__burger {
-    display: inline;
   }
 }
 

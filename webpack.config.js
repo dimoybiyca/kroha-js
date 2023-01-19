@@ -22,8 +22,8 @@ module.exports = {
   context: path.resolve(__dirname, "src"),
   entry: {
     main: ["./js/index.js", "/js/burger.js"],
-    info: ["./js/about.js"],
-    instruction: ["./js/instruction.js"],
+    info: ["./js/about.js", "/js/burger.js"],
+    instruction: ["./js/instruction.js", "/js/burger.js"],
   },
   output: {
     filename: filename("js"),
