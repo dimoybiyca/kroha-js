@@ -1,4 +1,4 @@
-import Info from "./Info";
+import Info from "./Parts/Info";
 
 export default class Control {
   static getInstance() {

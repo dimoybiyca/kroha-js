@@ -1,9 +1,9 @@
-import Info from "../Info";
-import ALU from "./ALU";
-import RAM from "./RAM";
-import Control from "../Control";
+import Control from "./Control";
+import ALU from "./Parts/ALU";
+import Info from "./Parts/Info";
+import RAM from "./Parts/RAM";
+import Screen from "./Parts/Screen";
 import Instruction from "./Instructions/Instruction";
-import Screen from "./Screen";
 
 export default class Computer {
   constructor(inputs) {

@@ -1,4 +1,4 @@
-import RAM from "./PC/RAM";
+import RAM from "./RAM";
 
 export default class Info {
   static getInstance() {

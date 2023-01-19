@@ -1,6 +1,6 @@
-import Info from "../../Info";
-import ALU from "../ALU";
-import RAM from "../RAM";
+import Info from "../Parts/Info";
+import ALU from "../Parts/ALU";
+import RAM from "../Parts/RAM";
 
 export default class DIV {
   constructor() {
