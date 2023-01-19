@@ -9,6 +9,15 @@ const filename = (ext) => (isDev ? `[name].${ext}` : `[name].[hash].${ext}`);
 
 console.log("IS DEV:", isDev);
 
+let htmlPageNames = ["info", "instruction"];
+let multipleHtmlPlugins = htmlPageNames.map((name) => {
+  return new HTMLWebpackPlugin({
+    template: `./${name}.html`, // relative path to the HTML files
+    filename: `${name}.html`, // output HTML files
+    chunks: [`${name}`], // respective JS files
+  });
+});
+
 module.exports = {
   context: path.resolve(__dirname, "src"),
   entry: {
@@ -36,27 +45,11 @@ module.exports = {
       },
       chunks: ["main"],
     }),
-    new HTMLWebpackPlugin({
-      filename: "info.html",
-      template: "./info.html",
-      minify: {
-        collapseWhitespace: !isDev,
-      },
-      chunks: ["info"],
-    }),
-    new HTMLWebpackPlugin({
-      filename: "instruction.html",
-      template: "./instruction.html",
-      minify: {
-        collapseWhitespace: !isDev,
-      },
-      chunks: ["instruction"],
-    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: filename("css"),
     }),
-  ],
+  ].concat(multipleHtmlPlugins),
   module: {
     rules: [
       {
@@ -81,6 +74,10 @@ module.exports = {
     ],
   },
   optimization: {
+    splitChunks: {
+      // include all types of chunks
+      chunks: "all",
+    },
     minimizer: [`...`, new CssMinimizerPlugin()],
   },
 };
