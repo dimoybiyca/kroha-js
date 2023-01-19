@@ -1,0 +1,417 @@
+//@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+@import "~normalize.css";
+@import "./info.scss";
+@import "./instruction.scss";
+@import "./burger.scss";
+$border: #f4ebd1;
+$contrast: #e9d8a6;
+$code: #ee9b00;
+$A1: #ca6702;
+$A2: #bb3e03;
+$A3: #ae2012;
+$value: #9b2226;
+$text: #94d2bd;
+$tag: #0a9396;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after *::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Press Start 2P", monospace;
+  background-color: #001219;
+  color: $contrast;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  text-align: center;
+  color: inherit;
+  padding: 0;
+  caret-color: $tag;
+  &:focus {
+    outline: none;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  padding: 10px 0 50px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__burger {
+    display: none;
+  }
+  &__nav {
+    &-list {
+      display: flex;
+      gap: 30px;
+      font-size: 18px;
+    }
+    &-elem {
+      transition: all 0.5s;
+      &:hover {
+        color: $text;
+      }
+    }
+  }
+}
+
+.logo {
+  font-size: 26px;
+  color: $A1;
+  &-higl {
+    padding: 5px 0 5px 5px;
+    margin-right: 5px;
+    color: #001219;
+    background-color: $A1;
+  }
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.computer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.table {
+  border-collapse: collapse;
+  border: solid 4px $border;
+  &__row {
+    height: 35px;
+  }
+  &__header {
+    border: solid 4px $border;
+    &:nth-child(2) {
+      color: $code;
+    }
+    &:nth-child(3) {
+      color: $A1;
+    }
+    &:nth-child(4) {
+      color: $A2;
+    }
+    &:nth-child(5) {
+      color: $A3;
+    }
+  }
+  &__sub-header {
+    border: solid 4px $border;
+  }
+  &__elem-adr {
+    width: 100px;
+    text-align: center;
+    border-right: solid 4px $border;
+  }
+  &__elem-mem {
+    &:nth-child(4n) {
+      border-right: solid 4px $border;
+    }
+    &:nth-child(-n + 16) {
+      color: $A3;
+    }
+    &:nth-child(-n + 12) {
+      color: $A2;
+    }
+    &:nth-child(-n + 8) {
+      color: $A1;
+    }
+    &:nth-child(-n + 4) {
+      color: $code;
+    }
+  }
+  margin-bottom: 30px;
+}
+
+.info {
+  border: solid 4px $border;
+  height: 630px;
+  width: 320px;
+  &__title {
+    text-align: center;
+  }
+  &__list {
+    padding: 5px 10px;
+  }
+  &__mode {
+    border: solid 2px $border;
+    padding: 10px;
+  }
+  &__elem {
+    margin-bottom: 10px;
+  }
+  &__tag {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: $tag;
+  }
+  &__val {
+    color: $value;
+  }
+  &__val--block {
+    display: block;
+    text-align: center;
+    color: $value;
+  }
+  &__table {
+    width: 280px;
+  }
+  &__head {
+    height: 40px;
+  }
+  &__head-col {
+    color: $contrast;
+  }
+  &__status {
+    margin-top: 50px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+  }
+  &__row {
+    height: 25px;
+    &:nth-child(1) {
+      color: $A1;
+    }
+    &:nth-child(2) {
+      color: $A2;
+    }
+    &:nth-child(3) {
+      color: $A3;
+    }
+  }
+  &__col {
+    width: 180px;
+    &:nth-child(2) {
+      color: $value;
+    }
+  }
+}
+
+.commands {
+  &__inner {
+    padding: 10px;
+    border: solid 4px $border;
+    height: 607px;
+    display: inline-block;
+  }
+  &__block {
+    margin-bottom: 30px;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__list {
+    color: $text;
+  }
+  &__elem {
+    margin-bottom: 5px;
+  }
+}
+
+.alu {
+  &__inner {
+    padding: 10px 20px;
+    border: 4px solid $border;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__elem {
+    margin-bottom: 10px;
+  }
+  &__tag {
+    color: $tag;
+  }
+  &__code {
+    color: $code;
+  }
+  &__a1 {
+    color: $A1;
+  }
+  &__a2 {
+    color: $A2;
+  }
+  &__a3 {
+    color: $A3;
+  }
+  &__def {
+    color: $value;
+  }
+}
+
+.screen {
+  width: 480px;
+}
+
+.active-adr {
+  font-weight: bold;
+  color: #001219;
+  background-color: $contrast;
+}
+
+.alu__tag + .alu__tag {
+  margin-left: 20px;
+}
+
+@media (max-width: 1200px) {
+  .commands__inner {
+    display: none;
+  }
+  .alu {
+    width: 456px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 970px) {
+  .alu {
+    width: 400px;
+    width: none;
+  }
+}
+
+@media (max-width: 920px) {
+  .screen {
+    font-size: 14px;
+    width: 420px;
+  }
+  .alu {
+    font-size: 14px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 810px) {
+  .header__inner {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .container {
+    max-width: 480px;
+  }
+  .info {
+    display: none;
+  }
+  .alu {
+    width: 456px;
+    font-size: 16px;
+  }
+  .screen {
+    width: 456px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 490px) {
+  .alu {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .screen {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  input {
+    width: 15px;
+  }
+  .container {
+    max-width: 350px;
+  }
+  .table {
+    font-size: 14px;
+    &__row {
+      height: 30px;
+    }
+    &__header {
+      font-size: 11px;
+    }
+    &__elem-mem {
+      padding: 0;
+    }
+  }
+  .alu {
+    width: 350px;
+    font-size: 12px;
+  }
+  .screen {
+    width: 350px;
+    font-size: 12px;
+  }
+  .alu__tag + .alu__tag {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 410px) {
+  .header__inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__burger {
+    display: inline;
+  }
+}
+
+@media (max-width: 340px) {
+  .table {
+    font-size: 12px;
+    &__row {
+      height: 25px;
+    }
+  }
+  .alu {
+    font-size: 11px;
+  }
+  .screen {
+    font-size: 11px;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

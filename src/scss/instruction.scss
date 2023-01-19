@@ -1,0 +1,76 @@
+.instruction {
+  &__title {
+    text-align: center;
+  }
+}
+
+.accordion {
+  margin-bottom: 15px;
+  &__article-sub {
+    margin-left: 50px;
+  }
+  &__list-sub {
+    margin-left: 50px;
+  }
+  &__btn {
+    font-family: "Press Start 2P", monospace;
+    background-color: #82828216;
+    color: #ee9b00;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    padding: 12px;
+    font-size: 20px;
+    &:hover {
+      background-color: #0a9396;
+    }
+  }
+  &__panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-family: sans-serif;
+    font-size: 24px;
+  }
+}
+
+.active {
+  background-color: #0a9396;
+}
+
+.accordion__btn:after {
+  content: "+"; /* Unicode character for "plus" sign (+) */
+  font-size: 28px;
+  color: #ee9b00;
+  float: right;
+  margin-left: 5px;
+  transition: all 0.3s;
+}
+
+.active:after {
+  content: "-"; /* Unicode character for "minus" sign (-) */
+}
+
+.no-margin {
+  margin-bottom: 5px;
+}
+
+.warning {
+  color: #9b2226;
+}
+
+.info-message {
+  color: #ca6702;
+}
+
+.blue {
+  color: #0a9396;
+}
+
+.monospace {
+  font-family: monospace;
+}
