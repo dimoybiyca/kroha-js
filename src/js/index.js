@@ -34,10 +34,6 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-document.addEventListener("click", (e) => {
-  control.setFocus();
-});
-
 for (let input of inputs) {
   input.addEventListener("click", function () {
     control.setFocusVal(parseInt(this.id.slice(1)), false);
