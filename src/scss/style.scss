@@ -64,6 +64,7 @@
     text-align: center;
   }
   &__list {
+    height: 100%;
     padding: 5px 10px;
   }
   &__mode {
@@ -96,10 +97,11 @@
     color: $contrast;
   }
   &__status {
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 16px;
     line-height: 25px;
     text-align: center;
+    height: 130px;
   }
   &__row {
     height: 25px;
@@ -118,6 +120,43 @@
     &:nth-child(2) {
       color: $value;
     }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    padding: 20px 8px;
+    &:hover {
+      background-color: $tag !important;
+      color: $border;
+    }
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+    }
+    &.btn-auto {
+      background-color: $A3;
+    }
+    &.btn-step {
+      background-color: $A2;
+    }
+    &.btn-tact {
+      background-color: $A1;
+    }
+  }
+}
+
+.info-mob {
+  display: none;
+  width: 456px;
+  &__inner {
+    border: solid 4px $border;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+  &__elem {
+    margin-bottom: 15px;
   }
 }
 
@@ -224,6 +263,9 @@
   .info {
     display: none;
   }
+  .info-mob {
+    display: block;
+  }
   .alu {
     width: 456px;
     font-size: 16px;
@@ -234,12 +276,17 @@
   }
 }
 
+@media (max-width: 500px) {
+  .info-mob__inner {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 490px) {
   .alu {
     font-size: 14px;
     width: 100%;
   }
-
   .screen {
     font-size: 14px;
     width: 100%;

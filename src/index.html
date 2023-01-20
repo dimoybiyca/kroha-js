@@ -65,23 +65,25 @@
               <li class="info__elem">
                 <div class="info__mode">
                   <span class="info__tag">Mode:</span>
-                  <span class="info__val" id="mode">Editor</span>
+                  <span class="info__val mode-content">Editor</span>
                 </div>
               </li>
 
               <li class="info__elem">
                 <span class="info__tag">Cell:</span>
-                <span class="info__val" id="cell">0000</span>
+                <span class="info__val cell-content">0000</span>
               </li>
 
               <li class="info__elem">
                 <span class="info__tag">Decimal:</span>
-                <span class="info__val--block" id="decimal">0</span>
+                <span class="info__val--block decimal-content">0</span>
               </li>
 
               <li class="info__elem">
                 <span class="info__tag">Instruction:</span>
-                <span class="info__val--block" id="instruction">A1 ==> A3</span>
+                <span class="info__val--block instruction-content">
+                  A1 ==> A3
+                </span>
               </li>
 
               <li class="info__elem">
@@ -114,13 +116,23 @@
                     </td>
                     <td class="info__col-dec">0</td>
                   </tr>
-
-                  <tr class="info__row">
-                    <td class="info__col" colspan="2">
-                      <p class="info__status"></p>
-                    </td>
-                  </tr>
                 </table>
+              </li>
+
+              <li class="info__elem">
+                <tr class="info__row">
+                  <td class="info__col" colspan="2">
+                    <p class="info__status"></p>
+                  </td>
+                </tr>
+              </li>
+
+              <li class="info__elem">
+                <div class="info__buttons">
+                  <button class="info__btn btn-auto">Auto</button>
+                  <button class="info__btn btn-step">Step</button>
+                  <button class="info__btn btn-tact">Tact</button>
+                </div>
               </li>
             </ul>
           </div>
@@ -152,6 +164,44 @@
             </ul>
           </div>
         </div>
+
+        <section class="info-mob">
+          <div class="info-mob__inner">
+            <h3 class="info__title">Info</h3>
+
+            <div class="info-mob__elem">
+              <span class="info__tag">Mode:</span>
+              <span class="info__val mode-content">Editor</span>
+            </div>
+
+            <div class="info-mob__elem">
+              <span class="info__tag">Cell:</span>
+              <span class="info__val cell-content">0000</span>
+            </div>
+
+            <div class="info-mob__elem">
+              <span class="info__tag">Decimal:</span>
+              <span class="info__val--block decimal-content">0</span>
+            </div>
+
+            <div class="info-mob__elem">
+              <span class="info__tag">Instruction:</span>
+              <span class="info__val--block instruction-content">
+                A1 ==> A3
+              </span>
+            </div>
+
+            <div class="info-mob__elem">
+              <p class="info__status"></p>
+            </div>
+
+            <div class="info__buttons">
+              <button class="info__btn btn-auto">Auto</button>
+              <button class="info__btn btn-step">Step</button>
+              <button class="info__btn btn-tact">Tact</button>
+            </div>
+          </div>
+        </section>
 
         <section class="alu">
           <div class="alu__inner">

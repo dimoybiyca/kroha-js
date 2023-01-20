@@ -68,7 +68,7 @@ export default class Control {
   }
 
   setFocus() {
-    this.inputs[this.focus].focus();
+    this.inputs[this.focus].focus({ preventScroll: true });
     this.inputs[this.focus].setSelectionRange(1, 1);
   }
 
