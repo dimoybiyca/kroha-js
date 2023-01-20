@@ -6,7 +6,7 @@ new PageBuilder(3, 4, 16).buildComputer();
 
 const inputs = document.getElementsByTagName("input");
 
-const computer = new Computer(inputs);
+const computer = new Computer();
 
 const control = computer.getControl();
 
@@ -14,7 +14,6 @@ document.addEventListener("keydown", (e) => {
   e.preventDefault();
   control.process(e.key);
 
-  console.log(e.key);
   switch (e.key.toUpperCase()) {
     case "A":
       console.log("A");
@@ -39,6 +38,18 @@ for (let input of inputs) {
     control.setFocusVal(parseInt(this.id.slice(1)), false);
   });
 }
+
+document
+  .querySelectorAll(".btn-auto")
+  .forEach((btn) => btn.addEventListener("click", () => computer.auto()));
+
+document
+  .querySelectorAll(".btn-step")
+  .forEach((btn) => btn.addEventListener("click", () => computer.step()));
+
+document
+  .querySelectorAll(".btn-tact")
+  .forEach((btn) => btn.addEventListener("click", () => computer.tact()));
 
 /*
 let initCode = [

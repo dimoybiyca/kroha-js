@@ -15,13 +15,13 @@ export default class Info {
 
   initValues() {
     this.ram = RAM.getInstance();
-    this.mode = document.querySelector("#mode");
-    this.cell = document.querySelector("#cell");
-    this.decimal = document.querySelector("#decimal");
-    this.instruction = document.querySelector("#instruction");
+    this.mode = document.querySelectorAll(".mode-content");
+    this.cell = document.querySelectorAll(".cell-content");
+    this.decimal = document.querySelectorAll(".decimal-content");
+    this.instruction = document.querySelectorAll(".instruction-content");
     this.addresses = document.querySelectorAll(".info__col-bin");
     this.values = document.querySelectorAll(".info__col-dec");
-    this.status = document.querySelector(".info__status");
+    this.status = document.querySelectorAll(".info__status");
   }
 
   updateUI(addr, line) {
@@ -32,17 +32,17 @@ export default class Info {
   }
 
   setModeContent(mode) {
-    this.mode.textContent = mode;
+    this.mode.forEach((e) => (e.textContent = mode));
   }
 
   setCellContent(addr) {
     const text = addr.toString(2).padStart(4, 0);
-    this.cell.textContent = text;
+    this.cell.forEach((e) => (e.textContent = text));
   }
 
   setDecimalContent(line) {
     const value = parseInt(line.join(""), 2);
-    this.decimal.textContent = value;
+    this.decimal.forEach((e) => (e.textContent = value));
   }
 
   setAddressesContent(line) {
@@ -57,11 +57,11 @@ export default class Info {
 
   setInstructionContent(line) {
     const value = parseInt(line.slice(0, 3).join(""), 2);
-    this.instruction.textContent = instructions[value];
+    this.instruction.forEach((e) => (e.textContent = instructions[value]));
   }
 
   setStatusContent(text) {
-    this.status.textContent = text;
+    this.status.forEach((e) => (e.textContent = text));
   }
 }
 
