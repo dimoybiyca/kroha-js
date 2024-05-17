@@ -15,7 +15,7 @@ export default class SUB {
   }
 
   execute() {
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1; i < 6; i++) {
       this.executeStep(i);
     }
   }
